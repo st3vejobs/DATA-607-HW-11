@@ -1,0 +1,69 @@
+---
+title: "Netflix Recommender System"
+author: "Shane Hylton"
+date: "11/4/2021"
+output: 
+  prettydoc::html_pretty:
+    theme: cayman
+    highlight: github
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Exploring Netflix's Recommendation System
+
+Netflix offers recommendations on television shows and movies for their customers on a daily basis. They use a recommender system to accomplish these tasks.
+
+
+###  Scenario Design Analysis:
+
+Who are the target users? 
+Netflix's target users are movie and TV watchers of all ages and socioeconomic backgrounds. 
+
+What are the goals of the users?
+The users' goals are typically to find entertainment. For some users, they seek education from their viewership of Netflix. 
+
+How can Netflix help the users accomplish those goals? 
+Netflix can help users accomplish these goals by providing a wide assortment of media options and by constructing targeted and relevant recommendations for their users. 
+
+#### Is it sensible to perform Scenario Design analysis for Netflix?
+
+Who is the target user for the recommender system?
+Netflix. The company is using the recommender system to try to improve user experiences with their product. 
+
+What are the goals of Netflix?
+Netflix seeks to use the recommender system to drive additional engagement from their customers. If more customers make use of the product, Netflix will be able to guarantee long-term subscriptions, thus increasing the income of the company. 
+
+How can the recommender system help Netflix accomplish these goals?
+The system can help Netflix accomplish the goals by offering value to customers, which will lead to those customers selecting Netflix as their chosen streaming service.
+
+### Reverse engineering Netflix's website:
+
+Netflix's website features their top trending show at the top of the screen, which is not necessarily a personalized recommendation. When an item is selected, a rating will be presented, showing the percentage that the chosen show matches what the viewer enjoys. Netflix also provides a top picks section, where the system has recommended a selection of shows and movies that most closely match the user's interests. Netflix collects the data in a number of ways, starting with the initial account creation. When a user sets up their profile, they are asked to select their favorites from various different movies and TV shows. This allows Netflix to create a baseline for recommendations. Once users are watching shows and movies, they are asked to like or dislike titles to help improve the recommendations. Perhaps the most important element to the recommendation system is that Netflix keeps track of viewing history. The system works recent shows and movies into their recommendations.
+
+Based on the layout of the website, it can be concluded that Netflix uses the following three methods for data collection for their recommendations:
+
+1. Sign-up survey
+2. Thumbs-up or thumbs-down ratings
+3. Viewing History
+
+
+[Carlos A. Gomez-Uribe](https://dl.acm.org/doi/pdf/10.1145/2843948) notes in his study on the Netflix Recommender System that users lose interest after under two minutes of searching for an interesting title to watch. He identifies that the key problem lies in trying to provide timely recommendations to customers so that they continue to use the service. The article also describes the other recommendation methods that I did not recognize as being recommendations initially. The "Trending Now," "Continue Watching," and "Because You Watched" sections are all also personalized recommendations that the system generates. 
+The "Because You Watched" section provides recommendations of titles that are similar in any number of categories to a chosen title that the user has viewed. 
+The "Continue Watching" section is derived from an algorithm that calculates the likelihood of a user deciding to continue watching a given show or movie. 
+Interestingly, the percent match that was mentioned previously was actually born from a competition hosted by Netflix to find a prediction system that was most effective at determining whether a user would also enjoy the selected title.
+According to Gomez-Uribe, 80% of Netflix viewership comes from the recommender system on the home screen, and the other 20% is from the Netflix Search. The search also uses NLPs to predict what the user is going to type as they are typing. The recommender system comes back into play in the search. After a search is performed, Netflix also displays related titles. This is especially evident when Netflix does not have the searched title, but they have other related options. 
+
+### Recommendations for Improvements:
+
+It is difficult to recommend many improvements for Netflix's world-class recommendation system. One recommendation that comes to mind, however, pertains to the interface. The home screen is very busy, which can overwhelm a viewer with too many options to choose from. 
+Another interesting option would be to put the recommender system to the test by offering a "Choose For Me" option where users can request a film or TV show that Netflix chooses on their behalf. This could help solve one of the main issues Gomez-Uribe noted, which is that the average user grows tired of looking after a minute or two. 
+Netflix could also expand the Like/Dislike button to feature a star-rating system instead. This could allow the system to fine-tune recommendations to find more precise matches. 
+
+### Work Cited
+
+Gomez-Uribe, Carlos A., and Neil Hunt. “The Netflix Recommender System.” ACM Transactions on Management Information Systems, vol. 6, no. 4, 2016, pp. 1–19., https://doi.org/10.1145/2843948. 
+
